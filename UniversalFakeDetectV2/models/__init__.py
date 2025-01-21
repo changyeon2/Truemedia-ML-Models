@@ -1,0 +1,1 @@
+from .UniversalFakeDetectv2 import UniversalFakeDetectv2

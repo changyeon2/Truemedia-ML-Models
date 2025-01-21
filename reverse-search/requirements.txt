@@ -1,0 +1,10 @@
+python-dotenv
+google-cloud-storage
+google-cloud-vision
+openai
+numpy
+scipy
+scikit-learn
+Pillow
+sanic
+requests
