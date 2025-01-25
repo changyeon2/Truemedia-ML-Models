@@ -4,3 +4,4 @@ Our [semantic deepfake detection approach](https://github.com/truemediaorg/deepf
 
 This approach is unique because instead of identifying discrepancies in the physical and/or auditory characteristics through, e.g., wavelengths and pixels as is done in traditional deepfake detection, this approach determines the presence of manipulation through an investigation of the text’s underlying language. Predictions are based on language construction, narrative coherence, and factual alignment using an advanced LLM which draws from a variety of historical sources to evaluate the efficacy and veracity of a media content.
 
+The implementation of the transcript pipeline for audio deepfake detection can be found inside the TrueMedia.org application, here: https://github.com/truemediaorg/deepfake-app/blob/main/apps/detect/app/api/starters/gpt-util/transcriptAnalysis.ts

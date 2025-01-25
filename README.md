@@ -7,10 +7,10 @@ This repository contains a collection of advanced machine learning models and de
 
 Each detector is contained in its own directory with specific documentation and implementation details.
 
-
 ## Models
 
-### 1. DistilDIRE
+### 1. [DistilDIRE](/DistilDIRE) (image)
+
 Distil-DIRE is a lightweight version of DIRE, which can be used for real-time applications. Instead of calculating DIRE image directly, Distl-DIRE aims to reconstruct the features of corresponding DIRE image forwared by a image-net pretrained classifier with one-step noise of DDIM inversion. ([Paper Link](https://arxiv.org/abs/2406.00856))
 
 ### 2. [UniversalFakeDetectV2](/UniversalFakeDetectV2) (image)
