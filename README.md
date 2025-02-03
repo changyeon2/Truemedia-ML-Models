@@ -1,4 +1,4 @@
-[Update February 3, 2024] We haven’t shared the model weights with anyone yet, as we’re still carefully working on a responsible release policy to ensure security and prevent any potential misuse. Thank you for your understanding!
+[Update February 3, 2025] We haven’t shared the model weights with anyone yet, as we’re still carefully working on a responsible release policy to ensure security and prevent any potential misuse. Thank you for your understanding.
 
 > This code is published as-is for reference and educational purposes in the field of deepfake detection. It represents a historical implementation by TrueMedia.org and is not actively maintained. The repository does not accept pull requests or support requests. 
 
