@@ -2,7 +2,7 @@
 
 # TrueMedia.org ML Models Collection
 
-This repository contains a collection of advanced machine learning models and detectors for various computer vision and generative AI tasks. These were developed by [TrueMedia.org](https://www.truemedia.org/), a non-profit service that detects deepfakes in social media.
+This repository contains a collection of advanced machine learning models and deepfake detectors. The models were developed by [TrueMedia.org](https://www.truemedia.org/), a non-profit organization committed to detecting political deepfakes and supporting fact-checking efforts for the 2024 election.
 
 Each detector is contained in its own directory with specific documentation and implementation details.
 
@@ -12,6 +12,10 @@ Each detector is contained in its own directory with specific documentation and 
 
 Distil-DIRE is a lightweight version of DIRE, which can be used for real-time applications. Instead of calculating DIRE image directly, Distl-DIRE aims to reconstruct the features of corresponding DIRE image forwared by a image-net pretrained classifier with one-step noise of DDIM inversion. ([Paper Link](https://arxiv.org/abs/2406.00856))
 
+- Utilizes a knowledge distillation approach from pre-trained diffusion models.
+- Achieves a 3.2x faster inference speed compared to the traditional DIRE framework.
+- Capable of detecting diffusion-generated images as well as those produced by GANs
+ 
 ### 2. [UniversalFakeDetectV2](/UniversalFakeDetectV2) (image)
 
 An updated implementation of the "UniversalFakeDetect" model by [Ojha et al.](https://arxiv.org/abs/2302.10174) for detecting AI-generated images. Key features:
@@ -87,7 +91,7 @@ This project is licensed under the terms of the MIT license. Note that our [GenC
 
 ## Contributors
 
-The Machine Learning engineers at TrueMedia.org built upon and improved open-source models and developed new detectors. We're sharing our improvements with the community.
+The Machine Learning engineers at TrueMedia.org improved open-source models and also developed new detectors. We're now making these advancements available to the community.
 
 [Aerin Kim](https://github.com/aerinkim)
 
@@ -108,3 +112,7 @@ The Machine Learning engineers at TrueMedia.org built upon and improved open-sou
 [Max Bennett](https://github.com/maxmiles)
 
 [Nuria Alina Chandra](https://github.com/nuriachandra)
+
+[Yewon Lim](https://github.com/yevvonlim)
+
+[Changyeon Lee](https://github.com/changyeon2)
