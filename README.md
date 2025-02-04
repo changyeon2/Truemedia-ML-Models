@@ -22,28 +22,26 @@ Distil-DIRE is a lightweight version of DIRE, which can be used for real-time ap
 
 An updated implementation of the "UniversalFakeDetect" model by [Ojha et al.](https://arxiv.org/abs/2302.10174) for detecting AI-generated images. Key features:
 
-- Built on HuggingFace CLIP models
+- Untrained Feature Space Utilization: Uses the feature space of large pre-trained vision-language models like CLIP-ViT, which are not specifically trained for distinguishing real from fake images.
+- Enhanced Generalization: Demonstrates superior performance in detecting fake images from a wide variety of unseen generative models, including diffusion and autoregressive models.
+- Simple and Efficient Classification: Uses nearest neighbor and linear probing methods in the pre-trained feature space, avoiding extensive model training and reducing computational overhead.
 - Simplified codebase to allow training on large image datasets (100k+)
-- Streamlined training and testing scripts
-- Docker deployment support
 
 ### 3. [GenConViT](https://github.com/truemediaorg/GenConViT) (video)
 
-An updated implementation of the GenConViT model by [Wodajo et al.](https://arxiv.org/abs/2307.07036). Features:
+An updated implementation of the GenConViT model by [Wodajo et al.](https://arxiv.org/abs/2307.07036). It analyzes both visual artifacts and latent data distributions. Features:
 
-- Support for both VAE and encoder-decoder architectures
+- Hybrid Architecture: Combines ConvNeXt and Swin Transformer for robust feature extraction, leveraging CNNs for local features and Transformers for global context.
+- Generative Learning: Utilizes Autoencoder and Variational Autoencoder to capture latent data distributions
 - FP16 precision support
 - Frame-based video processing capabilities
-- CLI interface for easy model interaction
 
 ### 4. [StyleFlow](/StyleFlow) (video)
 
-A model for temporal-aware style transfer and manipulation ([Paper Link](https://openaccess.thecvf.com/content/CVPR2024/papers/Choi_Exploiting_Style_Latent_Flows_for_Generalizing_Deepfake_Video_Detection_CVPR_2024_paper.pdf)). Includes:
+By combining the StyleGRU module and Style Attention Module (SAM), it effectively captures temporal and visual inconsistencies ([Paper Link](https://openaccess.thecvf.com/content/CVPR2024/papers/Choi_Exploiting_Style_Latent_Flows_for_Generalizing_Deepfake_Video_Detection_CVPR_2024_paper.pdf)). Features:
 
-- Time transformer architecture
-- Face-aware processing
-- Video frame processing capabilities
-- ResUNet implementation for feature extraction
+- Style Latent Flow Analysis: Captures anomalies in the temporal changes of style latent vectors, highlighting suppressed variance in deepfake videos.
+- StyleGRU Module with Contrastive Learning: Encodes the dynamics of style latent flows using a GRU network trained with supervised contrastive learning to extract robust style-based temporal features.
 
 ### 5. [Reverse Research](/reverse-search) (image)
 
@@ -56,12 +54,10 @@ A reverse image search pipeline for deepfake detection that leverages multiple A
 
 ### 6. [FTCN](/FTCN) (video)
 
-An updated implementation of the "FTCN" model used for detecting deepfakes ([Paper Link](https://arxiv.org/abs/2108.06693)):
+An updated implementation of the FTCN (Fully Temporal Convolution Network) model ([Paper Link](https://arxiv.org/abs/2108.06693)). Aims to explore the long-term temporal coherence with temporal transformer network:
 
-- Aims to explore the long-term temporal coherence with temporal transformer network
-- Fully temporal convolution network
-- Extracts temporal features
-- Anaylzes facials features
+- Uses temporal-only convolutions by reducing spatial kernel sizes to focus on temporal features, encouraging the model to learn temporal incoherence.
+- End-to-End Training Without Pre-training: The framework can be trained from scratch without any pre-trained models or external datasets.
 
 ### 7. [Transcript Based Detector](/transcript) (audio)
 
