@@ -25,23 +25,25 @@ An updated implementation of the "UniversalFakeDetect" model by [Ojha et al.](ht
 - Untrained Feature Space Utilization: Uses the feature space of large pre-trained vision-language models like CLIP-ViT, which are not specifically trained for distinguishing real from fake images.
 - Enhanced Generalization: Demonstrates superior performance in detecting fake images from a wide variety of unseen generative models, including diffusion and autoregressive models.
 - Simple and Efficient Classification: Uses nearest neighbor and linear probing methods in the pre-trained feature space, avoiding extensive model training and reducing computational overhead.
-- Simplified codebase to allow training on large image datasets (100k+)
+- Streamlined codebase to allow training on large image datasets (100k+)
 
 ### 3. [GenConViT](https://github.com/truemediaorg/GenConViT) (video)
 
 An updated implementation of the GenConViT model by [Wodajo et al.](https://arxiv.org/abs/2307.07036). It analyzes both visual artifacts and latent data distributions. Features:
 
 - Hybrid Architecture: Combines ConvNeXt and Swin Transformer for robust feature extraction, leveraging CNNs for local features and Transformers for global context.
-- Generative Learning: Utilizes Autoencoder and Variational Autoencoder to capture latent data distributions
-- FP16 precision support
+- Generative Learning: Uses Autoencoder and Variational Autoencoder to capture latent data distributions
 - Frame-based video processing capabilities
+- Streamlined training and testing scripts
+- Docker deployment support
+- FP16 precision support
 
 ### 4. [StyleFlow](/StyleFlow) (video)
 
 By combining the StyleGRU module and Style Attention Module (SAM), it effectively captures temporal and visual inconsistencies ([Paper Link](https://openaccess.thecvf.com/content/CVPR2024/papers/Choi_Exploiting_Style_Latent_Flows_for_Generalizing_Deepfake_Video_Detection_CVPR_2024_paper.pdf)). Features:
 
 - Style Latent Flow Analysis: Captures anomalies in the temporal changes of style latent vectors, highlighting suppressed variance in deepfake videos.
-- StyleGRU Module with Contrastive Learning: Encodes the dynamics of style latent flows using a GRU network trained with supervised contrastive learning to extract robust style-based temporal features.
+- StyleGRU Module with Contrastive Learning: Encodes the dynamics of style latent flows using a GRU network trained with supervised contrastive learning to extract  style-based temporal features.
 
 ### 5. [Reverse Research](/reverse-search) (image)
 
@@ -54,7 +56,7 @@ A reverse image search pipeline for deepfake detection that leverages multiple A
 
 ### 6. [FTCN](/FTCN) (video)
 
-An updated implementation of the FTCN (Fully Temporal Convolution Network) model ([Paper Link](https://arxiv.org/abs/2108.06693)). Aims to explore the long-term temporal coherence with temporal transformer network:
+An updated implementation of the FTCN (Fully Temporal Convolution Network) model ([Paper Link](https://arxiv.org/abs/2108.06693)). The goal is to leverage long-term temporal coherence using a Temporal Transformer Network.
 
 - Uses temporal-only convolutions by reducing spatial kernel sizes to focus on temporal features, encouraging the model to learn temporal incoherence.
 - End-to-End Training Without Pre-training: The framework can be trained from scratch without any pre-trained models or external datasets.
